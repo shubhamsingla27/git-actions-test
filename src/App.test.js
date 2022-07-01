@@ -13,14 +13,14 @@ test("inputs should be initially empty", () => {
   expect(confirmPasswordInputElement.value).toBe("");
 });
 
-// test("should be able to type email", () => {
-//   render(<App />);
-//   const emailInputElement = screen.getByRole("textbox", {
-//     name: /email/i,
-//   });
-//   userEvent.type(emailInputElement, "test@test.com");
-//   expect(emailInputElement.value).toBe("test@test.com");
-// });
+test("should be able to type email", () => {
+  render(<App />);
+  const emailInputElement = screen.getByRole("textbox", {
+    name: /email/i,
+  });
+  userEvent.type(emailInputElement, "test@test.com");
+  expect(emailInputElement.value).toBe("test@test.com");
+});
 
 // test("should be able to type password", () => {
 //   render(<App />);
