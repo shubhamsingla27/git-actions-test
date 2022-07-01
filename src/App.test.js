@@ -89,36 +89,36 @@ test("show error on invalid email", () => {
 //   expect(passwordErrorElementAgain).toBeInTheDocument();
 // });
 
-test("show error if passwords dont match", () => {
-  render(<App />);
+// test("show error if passwords dont match", () => {
+//   render(<App />);
 
-  const confirmPasswordErrorElement = screen.queryByText(
-    /the passwords dont match. try again/i
-  );
+//   const confirmPasswordErrorElement = screen.queryByText(
+//     /the passwords dont match. try again/i
+//   );
 
-  const emailInputElement = screen.getByRole("textbox", {
-    name: /email/i,
-  });
+//   const emailInputElement = screen.getByRole("textbox", {
+//     name: /email/i,
+//   });
 
-  const passwordInputElement = screen.getByLabelText("Password");
-  const confirmPasswordInputElement =
-    screen.getByLabelText(/confirm password/i);
+//   const passwordInputElement = screen.getByLabelText("Password");
+//   const confirmPasswordInputElement =
+//     screen.getByLabelText(/confirm password/i);
 
-  const submitButtonElement = screen.getByRole("button", {
-    name: /submit/i,
-  });
+//   const submitButtonElement = screen.getByRole("button", {
+//     name: /submit/i,
+//   });
 
-  userEvent.type(emailInputElement, "selena@test.com");
-  userEvent.type(passwordInputElement, "12345");
-  expect(confirmPasswordErrorElement).not.toBeInTheDocument();
-  userEvent.type(confirmPasswordInputElement, "12346");
-  userEvent.click(submitButtonElement);
+//   userEvent.type(emailInputElement, "selena@test.com");
+//   userEvent.type(passwordInputElement, "12345");
+//   expect(confirmPasswordErrorElement).not.toBeInTheDocument();
+//   userEvent.type(confirmPasswordInputElement, "12346");
+//   userEvent.click(submitButtonElement);
 
-  const confirmPasswordErrorElementAgain = screen.queryByText(
-    /the passwords dont match. try again/i
-  );
-  expect(confirmPasswordErrorElementAgain).toBeInTheDocument();
-});
+//   const confirmPasswordErrorElementAgain = screen.queryByText(
+//     /the passwords dont match. try again/i
+//   );
+//   expect(confirmPasswordErrorElementAgain).toBeInTheDocument();
+// });
 
 test("should show no error if every input is valid", () => {
   render(<App />);
