@@ -13,6 +13,9 @@
     "web-vitals": "^1.1.2"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js*"
+    ],
     "coverageThreshold": {
       "global": {
         "lines": 90,
