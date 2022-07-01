@@ -15,13 +15,7 @@
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js*"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "lines": 90,
-        "statements": 90
-      }
-    }
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
