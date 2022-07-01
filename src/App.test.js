@@ -35,6 +35,7 @@ test("should be able to type confirm password", () => {
   userEvent.type(confirmPasswordInputElement, "password!");
   expect(confirmPasswordInputElement.value).toBe("password!");
 });
+//
 
 // test("show error on invalid email", () => {
 //   render(<App />);
