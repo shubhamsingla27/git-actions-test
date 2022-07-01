@@ -22,19 +22,19 @@ test("should be able to type email", () => {
   expect(emailInputElement.value).toBe("test@test.com");
 });
 
-// test("should be able to type password", () => {
-//   render(<App />);
-//   const passwordInputElement = screen.getByLabelText("Password");
-//   userEvent.type(passwordInputElement, "password!");
-//   expect(passwordInputElement.value).toBe("password!");
-// });
-// test("should be able to type confirm password", () => {
-//   render(<App />);
-//   const confirmPasswordInputElement =
-//     screen.getByLabelText(/confirm password/i);
-//   userEvent.type(confirmPasswordInputElement, "password!");
-//   expect(confirmPasswordInputElement.value).toBe("password!");
-// });
+test("should be able to type password", () => {
+  render(<App />);
+  const passwordInputElement = screen.getByLabelText("Password");
+  userEvent.type(passwordInputElement, "password!");
+  expect(passwordInputElement.value).toBe("password!");
+});
+test("should be able to type confirm password", () => {
+  render(<App />);
+  const confirmPasswordInputElement =
+    screen.getByLabelText(/confirm password/i);
+  userEvent.type(confirmPasswordInputElement, "password!");
+  expect(confirmPasswordInputElement.value).toBe("password!");
+});
 
 // test("show error on invalid email", () => {
 //   render(<App />);
